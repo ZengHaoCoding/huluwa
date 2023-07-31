@@ -6,7 +6,7 @@
 
 ## 二、抓包请求，梳理必要条件
 
-![1690810212(1)](C:\Users\zenghao\AppData\Local\Temp\1690810212(1).png)
+![1690810212(1)](图片资源/1690810212(1).png)
 
 简单的抓了个包，抓取内容不重要，看了下请求头，图示红框请求头为葫芦娃家特有的加密的变量。
 
@@ -18,7 +18,7 @@
 
 看了小程序的文件结构，根据公共方法里的http请求js文件，找到了请求头的加密方法（文件：utils\encryption.js）
 
-![image-20230731213310669](C:\Users\zenghao\AppData\Roaming\Typora\typora-user-images\image-20230731213310669.png)
+![image-20230731213310669](图片资源/image-20230731213310669.png)
 
 查看文件得知，相关的请求头变量也有，所以加密方法找到了。
 
@@ -32,7 +32,7 @@
 
 同时出现了ak、sk关键词，在文件里也找到了自带的相关消息
 
-![1690810637(1)](C:\Users\zenghao\AppData\Local\Temp\1690810637(1).png)
+![1690810637(1)](图片资源/1690810637(1).png)
 
 根据知识量，大胆的猜测，葫芦娃的后端是采用[AK/SK鉴权](https://blog.csdn.net/sunhuaqiang1/article/details/126429288?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169081074716800222818523%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169081074716800222818523&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-5-126429288-null-null.142^v91^insert_down28v1,239^v12^insert_chatgpt&utm_term=ak%20sk&spm=1018.2226.3001.4187)
 
